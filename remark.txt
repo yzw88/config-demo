@@ -11,3 +11,6 @@ springcloud-config-client
 
 springcloud-config-server
      http://localhost:8700/application/dev
+
+
+curl -v -X POST http://localhost:8701/actuator/refresh
