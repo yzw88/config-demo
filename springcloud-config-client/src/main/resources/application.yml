@@ -6,7 +6,7 @@ spring:
       name: application
       label: master
       profile: dev
-      uri:
+      uri: http://localhost:8700/
       discovery:
         enabled: true
         service-id: springcloud-config-server
