@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8288
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否将eureka自身作为应用注册到eureka注册中心
+    register-with-eureka: false
+    #表示不去检索其他的服务，因为服务注册中心本身的职责就是维护服务实例，它也不需要去检索其他服务
+    fetch-registry: false
+    service-url:
+      # 是defaultZone而不能是 default-zone 否则识别不了会使用默认端口 8761
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

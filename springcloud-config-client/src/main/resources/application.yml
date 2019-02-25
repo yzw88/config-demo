@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: springcloud-config-client
+  cloud:
+    config:
+      name: application
+      label: master
+      profile: dev
+      uri:
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server
+server:
+  port: 8701
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8288/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
