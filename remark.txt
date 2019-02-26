@@ -5,12 +5,18 @@ eureka-server
 springcloud-config-client
     http://localhost:8701/getName
 
-
+springcloud-config-client-01
+    http://localhost:8702/getName
 
 
 
 springcloud-config-server
      http://localhost:8700/application/dev
+#消息总线 mq通知
+curl -v -X POST http://localhost:8700/actuator/bus-refresh
+
+
+
 
 
 curl -v -X POST http://localhost:8701/actuator/refresh
