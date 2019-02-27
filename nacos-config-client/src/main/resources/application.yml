@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: nacos-config-client
+  profiles:
+    active: uat
+server:
+  port: 8703
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8288/eureka/

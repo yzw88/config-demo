@@ -7,7 +7,6 @@
         <artifactId>config-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.lucky</groupId>
     <artifactId>springcloud-config-client-01</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springcloud-config-client-01</name>

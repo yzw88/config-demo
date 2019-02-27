@@ -7,11 +7,11 @@
         <artifactId>config-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>springcloud-config-client</artifactId>
+    <artifactId>nacos-config-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud-config-client</name>
+    <name>nacos-config-client</name>
     <packaging>jar</packaging>
-    <description>springcloud config 客户端</description>
+    <description>nacos 阿里配置中心服务端</description>
 
     <dependencies>
         <dependency>
@@ -35,36 +35,15 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!--nacos-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
-        </dependency>
-
-        <!--刷新配置-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
     </dependencies>
-
     <build>
-        <finalName>springcloud-config-client</finalName>
+        <finalName>nacos-config-client</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -91,7 +70,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.lucky.springcloud.config.client.SpringcloudConfigClientApplication</mainClass>
+                    <mainClass>com.lucky.nacos.config.client.NacosConfigClientApplication</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>
