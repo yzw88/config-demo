@@ -1,15 +1,17 @@
-package com.lucky.nacos.config.client;
+package com.lucky.apollo.config.client;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class NacosConfigClient01Application {
+@EnableApolloConfig
+public class ApolloConfigClient01Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(NacosConfigClient01Application.class, args);
+        SpringApplication.run(ApolloConfigClient01Application.class, args);
     }
 
 }

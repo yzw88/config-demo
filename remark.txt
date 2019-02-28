@@ -1,29 +1,36 @@
 eureka-server
     http://localhost:8288/
 
-
 springcloud-config-client
     http://localhost:8701/getName
 
 springcloud-config-client-01
     http://localhost:8702/getName
 
-
-
 springcloud-config-server
      http://localhost:8700/application/dev
 #消息总线 mq通知
 curl -v -X POST http://localhost:8700/actuator/bus-refresh
-
-
-
-
-
+#灰度发布
 curl -v -X POST http://localhost:8701/actuator/refresh
-
+#
 nacos-config-client
     后台访问：http://127.0.0.1:8848/nacos/index.html
     http://localhost:8703/config/get
 nacos-config-client-01
     http://localhost:8704/config/get
+
+#阿波罗
+apollo-config-client
+    http://localhost:8705/apollo/get
+
+apollo-config-client-01
+    http://localhost:8706/apollo/get
+
+
+后台配置：
+    私有：
+        pay.notify.url 	https://www.baidu.com/yezw/index3
+    共有：
+        mybatis.type-aliases-package 	com.luck.demo.api.*.model
 
