@@ -34,3 +34,10 @@ apollo-config-client-01
     共有：
         mybatis.type-aliases-package 	com.luck.demo.api.*.model
 
+博客：
+3 款主流微服务配置中心对比
+    https://yq.aliyun.com/articles/691647
+
+jqpeng的技术记事本
+    https://www.cnblogs.com/xiaoqi/p/configserver-compair.html
+
